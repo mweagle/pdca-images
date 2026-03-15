@@ -1,11 +1,15 @@
-name: Build pdca-languages-_all-ast-grep
+name: Build pdca-languages-all-ast-grep
 
 on:
   push:
     paths:
       - 'resources/languages/_all/ast-grep/**'
-      - '.github/workflows/build-languages-_all-ast-grep.yml'
+      - '.github/workflows/build-languages-all-ast-grep.yml'
   workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 
 permissions:
   contents: read
@@ -29,7 +33,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.repository_owner }}/pdca-languages-_all-ast-grep
+          images: ghcr.io/${{ github.repository_owner }}/pdca-languages-all-ast-grep
           tags: |
             type=sha
             type=ref,event=branch
