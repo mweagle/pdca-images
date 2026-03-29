@@ -33,6 +33,7 @@ Each workflow:
 - `straigent-engine-languages-python-tools-radon`
 - `straigent-engine-languages-python-tools-ruff`
 - `straigent-engine-languages-python-tools-tach`
+- `straigent-engine-languages-python-tools-vulture`
 
 ## Adding a New Image
 
