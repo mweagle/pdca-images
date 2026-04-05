@@ -27,6 +27,7 @@ Each workflow:
 
 - `straigent-engine-languages-all-ast-grep`
 - `straigent-engine-languages-all-gitleaks`
+- `straigent-engine-languages-all-import-linter`
 - `straigent-engine-languages-all-lizard`
 - `straigent-engine-languages-all-ripgrep`
 - `straigent-engine-languages-all-semgrep`
