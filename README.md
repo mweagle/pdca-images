@@ -26,6 +26,9 @@ Each workflow:
 ## Images Currently Built
 
 - `straigent-engine-languages-all-ast-grep`
+- `straigent-engine-languages-all-lizard`
+- `straigent-engine-languages-all-ripgrep`
+- `straigent-engine-languages-all-semgrep`
 - `straigent-engine-languages-go-tools-go-test-cov`
 - `straigent-engine-languages-python-tools-bandit`
 - `straigent-engine-languages-python-tools-pyright`
