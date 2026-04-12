@@ -1,10 +1,10 @@
-name: Build straigent-engine-languages-all-cue
+name: Build straigent-engine-languages-all-tokei
 
 on:
   push:
     paths:
-      - 'resources/languages/_all/cue/**'
-      - '.github/workflows/build-languages-all-cue.yml'
+      - 'resources/languages/_all/tokei/**'
+      - '.github/workflows/build-languages-all-tokei.yml'
   workflow_dispatch:
 
 env:
@@ -38,7 +38,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.repository_owner }}/straigent-engine-languages-all-cue
+          images: ghcr.io/${{ github.repository_owner }}/straigent-engine-languages-all-tokei
           tags: |
             type=sha,format=long,prefix=sha-
             type=ref,event=branch
@@ -48,8 +48,8 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v6
         with:
-          context: resources/languages/_all/cue
-          file: resources/languages/_all/cue/Dockerfile
+          context: resources/languages/_all/tokei
+          file: resources/languages/_all/tokei/Dockerfile
           push: true
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.meta.outputs.tags }}
