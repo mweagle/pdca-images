@@ -1,7 +1,7 @@
-FROM rust:1.80-slim-bookworm AS builder
+FROM rust:1.85-slim-bookworm AS builder
 
-# Install the latest tokei
-RUN cargo install tokei
+# Install tokei using the crate lockfile for deterministic dependency resolution.
+RUN cargo install --locked tokei
 
 FROM debian:bookworm-slim
 
